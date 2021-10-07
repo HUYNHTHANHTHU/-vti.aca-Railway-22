@@ -100,6 +100,7 @@ CREATE TABLE exam_questions
 	PRIMARY KEY(exam_id,question_id)
 );
 
+SELECT * FROM exam_questions;
 
 
 
