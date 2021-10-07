@@ -101,6 +101,6 @@ CREATE TABLE exam_questions
 );
 
 SELECT * FROM exam_questions;
-
+SELECT * FROM departments;
 
 
