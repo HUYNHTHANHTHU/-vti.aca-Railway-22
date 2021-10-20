@@ -16,8 +16,8 @@ VALUES 					('Dev'			),
 						('Test'			),
 						('Scrum Master'	),
 						('PM'			); 
-INSERT INTO `accounts`(email							, username			, fullname				, department_id	, position_id, create_date)
-VALUES 				('haidang29productions@gmail.com'	, 'dangblack'		,'Nguyễn hải Đăng'		,   '1'			,   '1'		,'2020-03-05'),
+INSERT INTO `accounts` (email							, username			, fullname				, department_id	, position_id, create_date)
+VALUES 				('haidang29productions@gmail.com'	, 'dangblack'		,'Nguyen hai dang'		,   '1'			,   '1'		,'2020-03-05'),
 					('account1@gmail.com'				, 'quanganh'		,'Nguyen Chien Thang2'	,   '1'			,   '2'		,'2020-03-05'),
                     ('account2@gmail.com'				, 'vanchien'		,'Nguyen Van Chien'		,   '2'			,   '3'		,'2020-03-07'),
                     ('account3@gmail.com'				, 'cocoduongqua'	,'Duong Do'				,   '5'			,   '4'		,'2020-03-08'),
