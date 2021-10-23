@@ -28,7 +28,7 @@ WHERE department_name = "Sale";
  
 -- Question 4: lấy ra thông tin account có full name dài nhất
 -- CACH 1:
-SELECT *,length(fullname)
+SELECT *, (length(fullname)
  FROM  `accounts`
  ORDER BY length(fullname) DESC
  LIMIT 1;

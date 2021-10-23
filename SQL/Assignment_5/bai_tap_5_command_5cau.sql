@@ -78,9 +78,9 @@ LIMIT 1;
 
 DROP VIEW IF EXISTS Q5;
 CREATE VIEW Q5 AS
-SELECT  acc.fullname, ifnull(q.content, 'không có câu hỏi') content
+SELECT  q.content, acc.fullname
 FROM `accounts` acc
-LEFT JOIN questions q
+INNER JOIN questions q
 ON acc.account_id = q.creator_id
 WHERE acc.fullname LIKE 'Nguyen%'	
 

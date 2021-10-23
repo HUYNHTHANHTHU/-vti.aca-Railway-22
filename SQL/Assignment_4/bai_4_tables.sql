@@ -81,9 +81,9 @@ CREATE TABLE questions
     type_id 		TINYINT UNSIGNED,
     creator_id 		INT UNSIGNED,
     create_date 	DATE,
-    FOREIGN KEY(type_id) REFERENCES type_questions(type_id),
-    FOREIGN KEY(category_id) REFERENCES category_questions(category_id),
-    FOREIGN KEY(creator_id) REFERENCES accounts(account_id)
+    FOREIGN KEY(type_id) REFERENCES type_questions(type_id) ON DELETE CASCADE,
+    FOREIGN KEY(category_id) REFERENCES category_questions(category_id) ON DELETE CASCADE, 
+    FOREIGN KEY(creator_id) REFERENCES accounts(account_id) ON DELETE CASCADE 
 );
 
 CREATE TABLE answers
@@ -92,7 +92,7 @@ CREATE TABLE answers
     content			TEXT,
     question_id 	INT UNSIGNED,
 	iscorrect		BIT DEFAULT 1,
-    FOREIGN KEY(question_id) REFERENCES questions(question_id)
+    FOREIGN KEY(question_id) REFERENCES questions(question_id) ON DELETE CASCADE
 );
 
 CREATE TABLE exams
@@ -104,7 +104,7 @@ CREATE TABLE exams
     duration 			TINYINT UNSIGNED,
     creator_id 			INT UNSIGNED,
     createdate 			DATE,
-    FOREIGN KEY(creator_id) REFERENCES accounts(account_id)
+    FOREIGN KEY(creator_id) REFERENCES accounts(account_id) 
 );
 
 CREATE TABLE exam_questions
@@ -112,8 +112,8 @@ CREATE TABLE exam_questions
 	exam_id 		INT UNSIGNED,
 	question_id 	INT UNSIGNED,
 	PRIMARY KEY(exam_id,question_id),
-    FOREIGN KEY(question_id) REFERENCES questions(question_id),
-    FOREIGN KEY(exam_id) REFERENCES exams(exam_id)
+    FOREIGN KEY(question_id) REFERENCES questions(question_id) ON DELETE CASCADE,
+    FOREIGN KEY(exam_id) REFERENCES exams(exam_id) ON DELETE CASCADE
 );
 
 
